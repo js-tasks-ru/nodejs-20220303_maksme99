@@ -15,6 +15,7 @@ server.on('request', (req, res) => {
       {
         res.statusCode = 400;
         res.end();
+        return;
       }
       const readStream = fs.createReadStream(filepath);
       readStream.on('error', (err) =>{
